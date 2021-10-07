@@ -1,0 +1,32 @@
+{
+  "name": "better-raylib",
+  "version": "1.0.1",
+  "description": "A more clean and easy-to-learn version of node-raylib",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "test": "node ./src/__tests__/index.js",
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Googcoon/Better-Raylib.git"
+  },
+  "author": "Googcoon",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Googcoon/Better-Raylib/issues"
+  },
+  "homepage": "https://github.com/Googcoon/Better-Raylib#readme",
+  "dependencies": {
+    "@types/node": "^16.10.3",
+    "raylib": "^0.8.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.3"
+  }
+}
