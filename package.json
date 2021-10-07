@@ -1,6 +1,6 @@
 {
   "name": "better-raylib",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A more clean and easy-to-learn version of node-raylib",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
