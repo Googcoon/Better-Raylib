@@ -1,26 +1,42 @@
 /**
- * better-raylib
+ * Better-Raylib v1.0.5
  *
  * https://github.com/Googcoon/Better-Raylib
  */
+
+
 const r = require('raylib')
-import { EventEmitter } from "events"
-//presets for raylib
+const fs = require('fs')
+// Presets for Raylib
 r.SetTraceLogLevel(r.LOG_NONE)
 r.SetExitKey(0)
+r.SetConfigFlags(r.FLAG_WINDOW_RESIZABLE)
+r.SetTargetFPS(60)
 
 /**
- * Create a window with the width and height and the name of the window, dont worry you can change it later
+ * Create a window with a name
  */
- export function CreateWindow(width: number, height: number, title: string): void {
-        r.InitWindow(width, height, title)
-}
+ export function CreateWindow(title: string, icon = r.LoadImage('./node_raylib.png') ): void {
+            r.InitWindow(0, 0, title)
+            r.SetWindowIcon(icon)
+            r.MaximizeWindow()
+            while (!r.WindowShouldClose) {
+                if (!r.IsWindowMinimized && r.IsWindowResized){}
+            }
+         
+        
+ }
+
+/**
+ * Checks whether the window is about to close or not
+ */
+export const WindowClose = r.WindowShouldClose()
 
 /**
  * Closes the window and unloads the memory
  */
 export function CloseWindow(): void {
-    r.CloseWindow()
+   r.CloseWindow()
 }
 
 /**
@@ -30,8 +46,12 @@ export const WindowReady: boolean = r.IsWindowReady()
 /**
  * Toggles between windowed and fullscreen
  */
-export function ToggleFullScreen(): void {
-    r.ToggleFullScreen();
+export async function Fullscreen(fullscreen: boolean): Promise<void> {
+    if (fullscreen) {
+      await  r.SetWindowSize(-1, -1)
+    } else {
+
+    }
 }
 
 

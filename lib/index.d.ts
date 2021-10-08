@@ -1,7 +1,16 @@
 /**
- * Create a window with the width and height and the name of the window, dont worry you can change it later
+ * Better-Raylib v1.0.5
+ *
+ * https://github.com/Googcoon/Better-Raylib
  */
-export declare function CreateWindow(width: number, height: number, title: string): void;
+/**
+ * Create a window with a name
+ */
+export declare function CreateWindow(title: string, icon?: any): void;
+/**
+ * Checks whether the window is about to close or not
+ */
+export declare const WindowClose: any;
 /**
  * Closes the window and unloads the memory
  */
@@ -13,4 +22,4 @@ export declare const WindowReady: boolean;
 /**
  * Toggles between windowed and fullscreen
  */
-export declare function ToggleFullScreen(): void;
+export declare function Fullscreen(fullscreen: boolean): Promise<void>;

@@ -1,6 +1,6 @@
 {
   "name": "better-raylib",
-  "version": "1.0.4",
+  "version": "0.0.1",
   "description": "A more clean and easy-to-learn version of node-raylib",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Googcoon/Better-Raylib.git"
+    "url": "https://github.com/Googcoon/Better-Raylib"
   },
   "author": "Googcoon",
   "license": "Apache-2.0",
